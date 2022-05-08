@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="player.QueueListTest$Level1" tests="11" skipped="0" failures="0" errors="0" timestamp="2022-05-08T11:53:52" hostname="thinkpad" time="2.211">
+  <properties/>
+  <testcase name="test getCurrentTrack when QueueList has tracks()" classname="player.QueueListTest$Level1" time="2.15"/>
+  <testcase name="test getCurrentTrack when QueueList empty()" classname="player.QueueListTest$Level1" time="0.007"/>
+  <testcase name="test previous when current track is the first in tracks()" classname="player.QueueListTest$Level1" time="0.005"/>
+  <testcase name="test next when QueueList is constructed with initialTrack higher than 0()" classname="player.QueueListTest$Level1" time="0.006"/>
+  <testcase name="test normal flow()" classname="player.QueueListTest$Level1" time="0.006"/>
+  <testcase name="test previous when QueueList empty()" classname="player.QueueListTest$Level1" time="0.004"/>
+  <testcase name="test getCurrentTrack when QueueList is constructed with initialTrack higher than 0()" classname="player.QueueListTest$Level1" time="0.005"/>
+  <testcase name="test next when QueueList empty()" classname="player.QueueListTest$Level1" time="0.004"/>
+  <testcase name="test next when the end of QueueList tracks is reached()" classname="player.QueueListTest$Level1" time="0.005"/>
+  <testcase name="test next when QueueList has tracks()" classname="player.QueueListTest$Level1" time="0.005"/>
+  <testcase name="test previous when QueueList is constructed with initialTrack higher than 0()" classname="player.QueueListTest$Level1" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

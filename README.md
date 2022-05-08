@@ -28,15 +28,15 @@ You can send your GitHub project link or zip your directory and send it via emai
 
 ## Challenge
 
-A `QueueList` is a central element at Deezer. In fact, the whole player is based on this `QueueList`. The challenge here will be to build a simple `QueueList`.
+A `player` is a central element at Deezer. In fact, the whole player is based on this `player`. The challenge here will be to build a simple `player`.
 
 The core of an app like Deezer is the player: the component that enable us to have the wanted Audio output.
-This component need to get elements to play. Those elements, called `Track` (you can find a preview of it's structure in the json `data/tracks.json`) are stacked into a list that represent our `QueueList`. To be more explicit, a `QueueList` is a container that can represent an Album or a Playlist but stay flexible (add or remove elements, reorder them, ... ).
-The aim of this `QueueList` is to provide access to the `Tracks` it contains whenever the player need it. 
+This component need to get elements to play. Those elements, called `Track` (you can find a preview of it's structure in the json `data/tracks.json`) are stacked into a list that represent our `player`. To be more explicit, a `player` is a container that can represent an Album or a Playlist but stay flexible (add or remove elements, reorder them, ... ).
+The aim of this `player` is to provide access to the `Tracks` it contains whenever the player need it. 
 
 ### Level 1:
 
-In this first challenge you will create this expected `QueueList`:
+In this first challenge you will create this expected `player`:
 - It should be able to contain `Track` elements
 - Have a method `getCurrentTrack` which enable us to get the currently playing `Track`
 - A method `next` which will return the next track and update the current track
@@ -46,13 +46,13 @@ In this first challenge you will create this expected `QueueList`:
 
 ### Level 2
 
-Now you will add 2 new methods to our `QueueList`:
+Now you will add 2 new methods to our `player`:
 
-- `add`: enable us to add one or more items at the end of the `QueueList`
--  `removeAt`: enable us to remove an item anywhere in `QueueList`
+- `add`: enable us to add one or more items at the end of the `player`
+-  `removeAt`: enable us to remove an item anywhere in `player`
 
 ### Level 3
 
-Here we go, now you can use and deserialize the `data/tracks.json` to fill the QueueList. 
+Here we go, now you can use and deserialize the `data/tracks.json` to fill the player. 
 To do so, we recommend using the `kotlinx-serialization-json` library (Available [here](https://github.com/Kotlin/kotlinx.serialization)), but if you are more familiar with another one, feel free to use it.
 
