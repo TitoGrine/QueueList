@@ -9,21 +9,46 @@ class QueueList() {
         tracks.addAll(initialTracks)
     }
 
+    private fun incrementCurrentTrack() {
+        if (tracks.size == 0) return
+
+        currentTrack = (currentTrack + 1) % tracks.size
+    }
+
+    private fun decrementCurrentTrack() {
+        currentTrack = Integer.max(currentTrack - 1, 0)
+    }
+
     fun getCurrentTrack(): Track? {
         return tracks.getOrNull(currentTrack)
     }
 
     fun next(): Track? {
-        if (tracks.size == 0) return null
-
-        currentTrack = (currentTrack + 1) % tracks.size
+        incrementCurrentTrack()
 
         return tracks.getOrNull(currentTrack)
     }
 
     fun previous(): Track? {
-        currentTrack = Integer.max(currentTrack - 1, 0)
+        decrementCurrentTrack()
 
         return tracks.getOrNull(currentTrack)
+    }
+
+    fun add(newTrack: Track): Boolean {
+        return tracks.add(newTrack)
+    }
+
+    fun add(newTracks: Collection<Track>): Boolean {
+        return tracks.addAll(newTracks)
+    }
+
+    fun removeAt(trackIndex: Int): Track? {
+        if (trackIndex !in 0 until tracks.size) return null
+
+        if (trackIndex == currentTrack && trackIndex == tracks.size - 1) currentTrack = 0
+        else if (trackIndex < currentTrack) decrementCurrentTrack()
+
+        return tracks.removeAt(trackIndex)
     }
 }
