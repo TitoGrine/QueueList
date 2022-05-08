@@ -1,5 +1,8 @@
 package player
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 class QueueList() {
     private var currentTrack: Int = 0
     private val tracks: MutableList<Track> = mutableListOf()
